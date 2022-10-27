@@ -14,8 +14,7 @@ print("Hello " + user + "!")
 print(f'{greeting} {user}!')
 
 # Counting characters (from an input)
-name = input("What is your name? ")
-print(len(name))
+print(len(input("What is your name? ")))
 
 # Assignment 1
 # Variables
