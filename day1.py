@@ -1,32 +1,38 @@
-#Day 1 of 100 Days of Code - Python
-#Exercise - Learn to work with "print"
+# Day 1 of 100 Days of Code - Python
+# https://www.udemy.com/course/100-days-of-code/
+# Exercise - Learn to work with "print"
 
-#Variables
+# Variables
 greeting = "G'day"
 user = "Beaux"
 
-#Simple
+# Simple
 print("Hello World!")
 print("Hello " + user + "!")
 
-#Utilising print formating (f)
+# Utilising print formating (f)
 print(f'{greeting} {user}!')
 
+# Counting characters (from an input)
+name = input("What is your name? ")
+print(len(name))
 
-#Assignment 1
-#Variables
+# Assignment 1
+# Variables
 welcome = "Welcome to the Band Name Generator"
-first_question = "What's the name of the city you grew up in? "
-second_question = "What's your pet's name? "
+firstQuestion = "What's the name of the city you grew up in? "
+secondQuestion = "What's your pet's name? "
 suggestion = "Your band name could be:"
 
-#Program
+# Program
 print(f'{welcome}')
-city = input(f"{first_question}")
-pet = input(f"{second_question}")
+city = input(f"{firstQuestion}")
+pet = input(f"{secondQuestion}")
 print(f"{suggestion} {city} {pet}!")
 
-#Alternative program - Same result, less code.
+# Alternative program - Same result, less code.
+# Prints welcome message from {welcome} variable
 print(f'{welcome}')
-print(f"{suggestion} " + input(f'{first_question}') + " " + input(f'{second_question}'))
+# Prints band name suggestion AFTER taking two inputs (firstQuestion, secondQuestion)
+print(f"{suggestion} " + input(f'{firstQuestion}') + " " + input(f'{secondQuestion}'))
 
