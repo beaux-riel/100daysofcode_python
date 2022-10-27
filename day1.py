@@ -26,3 +26,7 @@ city = input(f"{first_question}")
 pet = input(f"{second_question}")
 print(f"{suggestion} {city} {pet}!")
 
+#Alternative program - Same result, less code.
+print(f'{welcome}')
+print(f"{suggestion} " + input(f'{first_question}') + " " + input(f'{second_question}'))
+
