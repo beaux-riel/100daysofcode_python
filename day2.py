@@ -1,3 +1,8 @@
+# Day 2 of 100 Days of Code - Python
+# https://www.udemy.com/course/100-days-of-code/
+# Exercise - Learn to work with various primitive types.
+
+# Assignment 2
 #If the bill was $150.00, split between 5 people, with 12% tip. 
 
 #Each person should pay (150.00 / 5) * 1.12 = 33.6
@@ -7,7 +12,7 @@
 
 #Write your code below this line 👇
 
-# Assignment 2
+# Program
 # Greeting
 print("Welcome to the tip calculator.")
 
