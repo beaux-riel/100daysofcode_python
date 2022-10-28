@@ -1,6 +1,6 @@
 # Day 2 of 100 Days of Code - Python
 # https://www.udemy.com/course/100-days-of-code/
-# Exercise - Learn to work with various primitive types.
+# Exercise - Understanding Data Types and How to Manipulate Strings
 
 # Assignment 2
 #If the bill was $150.00, split between 5 people, with 12% tip. 
