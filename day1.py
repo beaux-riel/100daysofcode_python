@@ -19,19 +19,19 @@ print(len(input("What is your name? ")))
 # Assignment 1
 # Variables
 welcome = "Welcome to the Band Name Generator"
-firstQuestion = "What's the name of the city you grew up in? "
-secondQuestion = "What's your pet's name? "
+first_question = "What's the name of the city you grew up in? "
+second_question = "What's your pet's name? "
 suggestion = "Your band name could be:"
 
 # Program
 print(f'{welcome}')
-city = input(f"{firstQuestion}")
-pet = input(f"{secondQuestion}")
+city = input(f"{first_question}")
+pet = input(f"{second_question}")
 print(f"{suggestion} {city} {pet}!")
 
 # Alternative program - Same result, less code.
 # Prints welcome message from {welcome} variable
 print(f'{welcome}')
-# Prints band name suggestion AFTER taking two inputs (firstQuestion, secondQuestion)
-print(f"{suggestion} " + input(f'{firstQuestion}') + " " + input(f'{secondQuestion}'))
+# Prints band name suggestion AFTER taking two inputs (first_question, second_question)
+print(f"{suggestion} " + input(f'{first_question}') + " " + input(f'{second_question}'))
 
