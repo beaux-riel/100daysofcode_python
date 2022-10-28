@@ -1,6 +1,6 @@
 # Day 1 of 100 Days of Code - Python
 # https://www.udemy.com/course/100-days-of-code/
-# Exercise - Working with Variables in Python to Manage Data
+# Exercise - Working with Variables in Python to Manage Data 
 
 # Variables
 greeting = "G'day"
