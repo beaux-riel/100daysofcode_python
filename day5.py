@@ -1,6 +1,6 @@
 # Day 5 of 100 Days of Code - Python
 # https://www.udemy.com/course/100-days-of-code/
-# Exercise - Python Loops
+# Exercise - Python Loops 
 
 #Password Generator Project
 import random
