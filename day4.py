@@ -1,6 +1,6 @@
 # Day 4 of 100 Days of Code - Python
 # https://www.udemy.com/course/100-days-of-code/
-# Exercise - Randomisation and Python Lists 
+# Exercise - Randomisation and Python Lists  
 
 import random
 
