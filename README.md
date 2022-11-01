@@ -1,4 +1,4 @@
-# 100DaysOfCode Challenge
+# 100 Days Of Code Challenge - Python
 
 Two Main Rules
 1. Code minimum an hour every day for the next 100 days.
