@@ -35,6 +35,8 @@ while not bidding_finished:
     price = int(input("What is your bid?: $"))
     bids[name] = price
     should_continue = input("Are there any other bidders? Type 'yes or 'no'.\n")
+
+    # Logic for program loop or to announce the highest bidder
     if should_continue == "no":
         bidding_finished = True
         find_highest_bidder(bids)
