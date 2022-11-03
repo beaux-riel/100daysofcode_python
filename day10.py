@@ -1,6 +1,6 @@
 # Day 10 of 100 Days of Code - Python
 # https://www.udemy.com/course/100-days-of-code/
-# Exercise - Function with Outputs
+# Exercise - Functions with Outputs
 
 # Basic calculator
 from day10_art import logo
