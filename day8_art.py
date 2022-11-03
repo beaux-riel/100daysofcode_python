@@ -1,6 +1,6 @@
 # Day 8 of 100 Days of Code - Python 
 # https://www.udemy.com/course/100-days-of-code/
-# Exercise - Function Parameters and Caeser Cipher - ASCII Art
+# Exercise - Function Parameters and Caeser Cipher - ASCII Art 
 
 logo = """           
  ,adPPYba, ,adPPYYba,  ,adPPYba, ,adPPYba, ,adPPYYba, 8b,dPPYba,  
