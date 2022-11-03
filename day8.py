@@ -25,7 +25,7 @@ def caesar(start_text, shift_amount, cipher_direction):
   print(f"Here's the {cipher_direction}d result: {end_text}")
 
 #TODO-1: Import and print the logo from art.py when the program starts.
-from art import logo
+from day8_art import logo
 print(logo)
 
 # Program switch
