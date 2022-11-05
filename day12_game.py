@@ -7,6 +7,7 @@ def check_answer(guess, answer):
     elif guess < answer:
         print("Too low.")
     else:
+        print("You got it! The answer was {answer}.")
 
 #Choose a random number between 1 ands 100
 print("Welcome to Beaux's Kick Ass Number Guessing Game!")
@@ -14,6 +15,8 @@ print("I'm thinking of a number between 1 and 100.")
 answer = randint(1, 100)
 
 # Make function to set difficulty
+def set_difficulty():
+    level = input("Choose a difficulty. Type 'easy' or 'hard': ")
 
 
 #Let the user guess a number
