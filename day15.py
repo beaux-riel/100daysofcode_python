@@ -63,11 +63,11 @@ def is_resource_sufficient(order_ingredients):
 def process_coins():
     """Returns the total calculated from coins inserted."""
     print("Please insert coins.")
-    total = int(input("How many toonies?: ")) * 2
-    total += int(input("How many loonies?: ")) * 1
-    total += int(input("How many quarters?: ")) * 0.25
-    total += int(input("How many dimes?: ")) * 0.1
-    total += int(input("How many nickles?: ")) * 0.05
+    total = float(input("How many toonies?: ")) * 2
+    total += float(input("How many loonies?: ")) * 1
+    total += float(input("How many quarters?: ")) * 0.25
+    total += float(input("How many dimes?: ")) * 0.1
+    total += float(input("How many nickles?: ")) * 0.05
     return total
 
 # Compares money received to drink cost. Refunds if insufficient funds. 
