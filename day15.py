@@ -2,6 +2,10 @@
 # https://www.udemy.com/course/100-days-of-code/
 # Exercise - Local Development Environment Setup & the Coffee Machine
 
+# Imports - Once again, attempted to make this feel a little more interactive/"real world".
+import os
+import time
+
 # Supplied data
 # Increased cost of each item because "why not"?
 MENU = {
@@ -40,6 +44,10 @@ resources = {
     "coffee": 1000,
 }
 
+# Screen clear
+def clear():
+   os.system('clear')
+
 # Resource check
 def is_resource_sufficient(order_ingredients):
     """Returns True when order can be made, False if ingredients are insufficient."""
@@ -67,21 +75,28 @@ def is_transaction_successful(money_received, drink_cost):
     """Return True when the payment is accepted, or False if money is insufficient."""
     if money_received >= drink_cost:
         change = round(money_received - drink_cost, 2)
-        print(f"Here is ${change:.2f} in change.")
+        print('\nDispensing change')
+        time.sleep(3)
+        print(f"\nHere is ${change:.2f} in change.")
+        time.sleep(3)
         global profit
         profit += drink_cost
         return True
     else:
         # Corrected to 2 decimal places
-        print(f"Sorry that item cost ${drink_cost:.2f}.\nRefunding: ${money_received:.2f}.")
+        print(f"\nSorry that item cost ${drink_cost:.2f}.\nRefunding: ${money_received:.2f}.")
         return False
 
-# Make coffee - Duh. Removes individual resources from resources doctionary
+# Make coffee - Duh. Removes individual resources from resources dictionary
 def make_coffee(drink_name, order_ingredients):
     """Deduct the required ingredients from the resources."""
     for item in order_ingredients:
         resources[item] -= order_ingredients[item]
-    print(f"Here is your {drink_name} ☕️. Enjoy!")
+    print(f"\nDispensing {drink_name}") 
+    time.sleep(3)
+    print(f"\nHere is your {drink_name} ☕️. Enjoy!")
+    time.sleep(3)
+    clear()
 
 # Kill switch
 is_on = True
