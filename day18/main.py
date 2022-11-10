@@ -10,6 +10,7 @@ import random
 beaux = Turtle()
 beaux.shape("turtle")
 beaux.color("DeepPink3")
+beaux.pensize(7)
 
 # Color list for turtle to draw with
 colors = ["blue", "purple", "lime", "sky blue", "pale green", "gold", "indigo", "red"]
