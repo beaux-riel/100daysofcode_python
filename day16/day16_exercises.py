@@ -1,6 +1,6 @@
 # Day 16 of 100 Days of Code - Python
 # https://www.udemy.com/course/100-days-of-code/
-# Exercise - Object Oriented Programming (OOP) - Day 16 exercises
+# Exercise - Object Oriented Programming (OOP) - Day 16 exercises 
 
 # from turtle import Turtle, Screen
 
