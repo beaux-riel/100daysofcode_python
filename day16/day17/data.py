@@ -1,6 +1,6 @@
 # Day 17 of 100 Days of Code - Python
 # https://www.udemy.com/course/100-days-of-code/
-# Exercise - The Quiz Project and the Benefits of OOP - Data Bank - Provided
+# Exercise - The Quiz Project and the Benefits of OOP - Data Bank - Provided 
 
 question_data = [
     {"text": "A slug's blood is green.", "answer": "True"},

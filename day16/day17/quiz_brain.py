@@ -1,6 +1,6 @@
 # Day 17 of 100 Days of Code - Python
 # https://www.udemy.com/course/100-days-of-code/
-# Exercise - The Quiz Project and the Benefits of OOP - Quiz Brain
+# Exercise - The Quiz Project and the Benefits of OOP - Quiz Brain 
 
 # This module contains the app logic
 class QuizBrain:
