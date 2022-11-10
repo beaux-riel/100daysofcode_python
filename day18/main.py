@@ -1,3 +1,7 @@
+# Day 18 of 100 Days of Code - Python
+# https://www.udemy.com/course/100-days-of-code/
+# Exercise - Turtle and the Graphical User Interface (GUI) - Main 
+
 from turtle import Turtle, Screen
 import random
 
