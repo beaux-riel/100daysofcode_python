@@ -26,9 +26,11 @@ import random
 
 t.colormode(255)
 
+# Color lists
 finish_color_list = [(254, 215, 20), (30, 22, 17), (136, 99, 57), (215, 228, 242), (68, 100, 123), (242, 246, 244), (14, 24, 36), (246, 241, 245), (152, 156, 186), (2, 169, 229)]
 logo_color_list = [(254, 222, 69), (231, 73, 130), (39, 165, 92), (159, 218, 254), (82, 239, 182), (0, 169, 230), (91, 59, 186), (254, 137, 173), (198, 175, 243)]
 
+# Set your turtle
 beaux = t.Turtle()
 beaux.speed(0)
 beaux.hideturtle()
@@ -40,11 +42,13 @@ beaux.forward(550)
 beaux.setheading(0)
 number_of_dots = 256
 
+# Keep drawing until my {number_of_dots} is reached. Lift pen between each dot.
 for dot_count in range(1, number_of_dots + 1):
     beaux.dot(20, random.choice(logo_color_list))
     beaux.penup()
     beaux.forward(50)
 
+    # Each row should be 16 across
     if dot_count % 16 == 0:
         beaux.setheading(90)
         beaux.forward(50)
@@ -52,5 +56,6 @@ for dot_count in range(1, number_of_dots + 1):
         beaux.forward(800)
         beaux.setheading(0)
 
+# Create screen that will only exit on click
 screen = t.Screen()
 screen.exitonclick()
