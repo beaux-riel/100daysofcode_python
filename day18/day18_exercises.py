@@ -1,6 +1,6 @@
-# Day 19 of 100 Days of Code - Python
+# Day 18 of 100 Days of Code - Python
 # https://www.udemy.com/course/100-days-of-code/
-# Exercise - Python Tuples and How to Generate Random RGB Colors
+# Exercise - Turtle and the Graphical User Interface (GUI) - Exercises
 
 # Import ya' business
 import turtle as t
@@ -25,7 +25,7 @@ def random_color():
 
 # Directions for old mate to turn (went a little crazy)
 directions = [0, 45, 90, 135, 180, 225, 270, 315]
-beaux.pensize(15)
+# beaux.pensize(10)
 beaux.speed(0)
 
 # Fill that screen yo'
@@ -33,6 +33,7 @@ for _ in range(2000):
     beaux.forward(30)
     beaux.setheading(random.choice(directions))
     beaux.color(random_color())
+    beaux.pensize(random.randint(0,15))
 
 # Give me a screen to work with that only closes "on click"
 screen = t.Screen()
