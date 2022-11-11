@@ -23,8 +23,9 @@ def random_color():
     rgb_string = (r, g, b)
     return rgb_string
 
-beaux.pensize(10)
+beaux.pensize(2)
 beaux.speed(0)
+beaux.hideturtle()
 
 # Fill that screen yo'
 def spirograph_1(gap):
@@ -41,7 +42,7 @@ def spirograph_1(gap):
 #         current_heading = beaux.heading()
 #         beaux.setheading(current_heading + 10)
 
-spirograph_1(20)
+spirograph_1(10)
 
 # Give me a screen to work with that only closes "on click"
 screen = t.Screen()
