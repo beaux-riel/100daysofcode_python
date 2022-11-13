@@ -1,41 +1,42 @@
 # Day 20 of 100 Days of Code - Python
 # https://www.udemy.com/course/100-days-of-code/
-# Exercise - Build the Snake Game Part 1: Animation and Coordinates
+# Exercise - Build the Snake Game Part 1: Animation and Coordinates - Main
 
+# What ya' importin'?
 from turtle import Screen, Turtle
+from snake import Snake
 import time
 
+# Screen setup
 screen = Screen()
 screen.setup(width=600, height=600)
 screen.bgcolor("black")
 screen.title("Beaux's Snazzy Snake Game")
 screen.tracer(0)
 
-starting_positions = [(0, 0), (-20, 0), (-40, 0)]
+# Create snake instance
+snake = Snake()
 
-segments = []
+# Create listener and key bindings
+screen.listen()
+screen.onkey(snake.up, "Up")
+screen.onkey(snake.down, "Down")
+screen.onkey(snake.left, "Left")
+screen.onkey(snake.right, "Right")
 
-for position in starting_positions:
-    new_segment = Turtle("square")
-    new_segment.color("white")
-    new_segment.penup()
-    new_segment.goto(position)
-    segments.append(new_segment)
-
+# Power button/kill switch
 game_is_on = True
 
+# And action!
 while game_is_on:
     screen.update()
     time.sleep(0.1)
-    # for seg in segments:
-    #     seg.forward(20)
-    
-    for seg_num in range(len(segments) - 1, 0, -1):
-        new_x = segments[seg_num - 1].xcor()
-        new_y = segments[seg_num - 1].ycor()
-        segments[seg_num].goto(new_x, new_y)
-    segments[0].forward(20)
-    segments[0].left(90)
+
+    snake.move()
+
+# Exit game on screen click
+screen.exitonclick()
+
 
 # Left the below code in for reference's sake
 
@@ -51,4 +52,5 @@ while game_is_on:
 # segment_3.color("white")
 # segment_3.goto(x=-40, y=0)
 
-screen.exitonclick()
+    # for seg in segments:
+    #     seg.forward(20)
