@@ -1,6 +1,7 @@
 # Day 20 of 100 Days of Code - Python
 # https://www.udemy.com/course/100-days-of-code/
 # Exercise - Build the Snake Game Part 1: Animation and Coordinates - Snake class
+# Exercise - Build the Snake Game Part 2: Inheritance & List Slicing
  
 # What are ya' importing?
 from turtle import Turtle
@@ -28,7 +29,8 @@ class Snake:
     def create_snake(self):
         for position in STARTING_POSITIONS:
             self.add_segment(position)
-        
+    
+    # Logic to add a new segment (after eating)
     def add_segment(self, position):
         new_segment = Turtle("square")
         new_segment.color("green")
@@ -36,6 +38,7 @@ class Snake:
         new_segment.goto(position)
         self.segments.append(new_segment)
 
+    # Logic to {add_segment} to the end of the body 
     def extend(self):
         self.add_segment(self.segments[-1].position())
 

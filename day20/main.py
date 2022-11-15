@@ -1,6 +1,7 @@
 # Day 20 of 100 Days of Code - Python
 # https://www.udemy.com/course/100-days-of-code/
 # Exercise - Build the Snake Game Part 1: Animation and Coordinates - Main
+# Exercise - Build the Snake Game Part 2: Inheritance & List Slicing
 
 # What ya' importin'?
 from turtle import Screen
@@ -51,10 +52,19 @@ while game_is_on:
     # Detect collision with self.
     #if head collides with any segment in the tail:
         #trigger game over
-
+    
+    # For segments in snake NOT including the head (this: snake.segments[1:] slices 
+    # the head from the equation)
+    for segment in snake.segments[1:]:
+        if snake.head.distance(segment) < 10:
+            game_is_on = False
+            scoreboard.game_over()
 
 # Exit game on screen click
 screen.exitonclick()
+
+
+
 
 
 # Left the below code in for reference's sake
