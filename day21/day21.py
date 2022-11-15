@@ -15,7 +15,7 @@ class Fish(Animal):
         print("Doing this underwater.")
 
     def swim(self):
-        print("moving in water.")
+        print("Moving in water.")
 
 nemo = Fish()
 nemo.swim()
