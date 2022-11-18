@@ -1,3 +1,7 @@
+# Day 23 of 100 Days of Code - Python
+# https://www.udemy.com/course/100-days-of-code/
+# Exercise - The Turtle Crossing Capstone Project - Scoreboard Module
+
 from turtle import Turtle
 
 FONT = ("Courier", 24, "normal")
