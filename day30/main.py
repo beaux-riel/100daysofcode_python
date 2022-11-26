@@ -21,7 +21,7 @@
 try:
     file = open("day30/a_file.txt")
     a_dictionary = {"key": "value"}
-    print(a_dictionary["sdfdfdf"])
+    print(a_dictionary["hamburgersandwich"])
 except FileNotFoundError:
     file = open("day30/a_file.txt", "w")
     file.write("Something cool.")
