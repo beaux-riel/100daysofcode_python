@@ -10,8 +10,10 @@ BACKGROUND_COLOR = "#B1DDC6"
 current_card = {}
 to_learn = {}
 
+# Error handling logic: Try to open my revision words.
 try:
     data = pandas.read_csv("day31/data/words_to_learn.csv")
+# However if this is my first time using the app, open the complete list of French words.
 except FileNotFoundError:
     original_data = pandas.read_csv("day31/data/french_words.csv")
     print(original_data)
