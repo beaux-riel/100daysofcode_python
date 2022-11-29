@@ -10,12 +10,13 @@ from info import *
 
 today = (datetime.now().month, datetime.now().day)
 
-# HINT 2: Use pandas to read the birthdays.csv
 data = pandas.read_csv("day32/birthdays.csv")
 birthdays_dict = {(data_row.month, data_row.day): data_row for (index, data_row) in data.iterrows()}
+
 if today in birthdays_dict:
     birthday_person = birthdays_dict[today]
     file_path = f"day32/letter_templates/letter_{random.randint(1,3)}.txt"
+    
     with open(file_path) as letter_file:
         contents = letter_file.read()
         contents = contents.replace("[NAME]", birthday_person["name"])
