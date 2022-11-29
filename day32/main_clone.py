@@ -1,9 +1,18 @@
 # import smtplib
-# from info import *
 
 # # Google (didn't work)
-# # my_email = "b34ux.100days.test@gmail.com"
-# # password = "zkhmnvdeagjgtixv"
+# my_email = "b34ux.100days.test@gmail.com"
+# password = "iqlrftwwhbftnzyh"
+
+# connection = smtplib.SMTP("smtp.gmail.com")
+# connection.starttls()
+# connection.login(user=my_email, password=password)
+# connection.sendmail(from_addr=my_email, to_addrs="beaux.walton@gmail.com", msg="Hello")
+# connection.close()
+
+
+# import smtplib
+# from info import *
 
 # # Yahoo
 # my_email = MY_EMAIL
@@ -23,5 +32,9 @@ import datetime as dt
 
 now = dt.datetime.now()
 year = now.year
+month = now.month
+day_of_week = now.weekday()
+print(day_of_week)
 
-print(type(year))
+date_of_birth = dt.datetime(year= 1985, month= 8, day= 8, hour=17, minute=31)
+print(date_of_birth)
