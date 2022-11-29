@@ -1,23 +1,32 @@
-import info
-import smtplib
-import datetime as dt
+# Day 32 of 100 Days of Code - Python
+# https://www.udemy.com/course/100-days-of-code/
+# Exercise - Send Email (smtplib) & Manage Dates (datetime) - Automated Birthday Wisher
+
+from datetime import datetime
+import pandas
 import random
+import smtplib
+from info import *
 
-my_email = info.MY_EMAIL
-password = info.PASSWORD
+today = (datetime.now().month, datetime.now().day)
 
-now = dt.datetime.now()
-weekday = now.weekday()
-if weekday == 0:
-    with open("day32/quotes.txt") as quote_file:
-        all_quotes = quote_file.readlines()
-        quote = random.choice(all_quotes)
+# HINT 2: Use pandas to read the birthdays.csv
+data = pandas.read_csv("day32/birthdays.csv")
+birthdays_dict = {(data_row.month, data_row.day): data_row for (index, data_row) in data.iterrows()}
+if today in birthdays_dict:
+    birthday_person = birthdays_dict[today]
+    file_path = f"day32/letter_templates/letter_{random.randint(1,3)}.txt"
+    with open(file_path) as letter_file:
+        contents = letter_file.read()
+        contents = contents.replace("[NAME]", birthday_person["name"])
+        # print(contents)
 
-    print(quote)
     with smtplib.SMTP("smtp.mail.yahoo.com") as connection:
         connection.starttls()
-        connection.login(my_email, password)
+        connection.login(MY_EMAIL, PASSWORD)
         connection.sendmail(
-            from_addr=my_email, 
-            to_addrs=my_email, 
-            msg=f"Subject:Monday Motivation\n\n{quote}")
+            from_addr=MY_EMAIL, 
+            to_addrs=birthday_person["email"],
+            msg=f"Subject:Happy Birthday!\n\n{contents}"
+        )
+        # print(msg)

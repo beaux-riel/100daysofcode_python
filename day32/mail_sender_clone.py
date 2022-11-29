@@ -1,3 +1,7 @@
+# Day 32 of 100 Days of Code - Python
+# https://www.udemy.com/course/100-days-of-code/
+# Exercise - Send Email (smtplib) & Manage Dates (datetime) - Hacking script
+
 # import smtplib
 
 # # Google (didn't work)
@@ -9,7 +13,6 @@
 # connection.login(user=my_email, password=password)
 # connection.sendmail(from_addr=my_email, to_addrs="beaux.walton@gmail.com", msg="Hello")
 # connection.close()
-
 
 # import smtplib
 # from info import *
