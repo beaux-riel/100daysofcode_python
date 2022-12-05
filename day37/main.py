@@ -1,4 +1,5 @@
 import requests
+import datetime
 
 USERNAME = "b34ux"
 TOKEN = "supersecretpassword"
@@ -38,6 +39,12 @@ headers = {
 
 pixel_creation_endpoint = f"{pixela_endpoint}/{USERNAME}/graphs/{GRAPH_ID}"
 
+today = datetime.now()
 
-# response = requests.post(url=graph_endpoint, json=graph_config, headers=headers)
-# print(response.text)
+pixel_data = {
+    "date": today.strftime("%Y%m%d"),
+    "quantity": "1.71",
+}
+
+response = requests.post(url=pixel_creation_endpoint, json=pixel_data, headers=headers)
+print(response.text)
