@@ -62,3 +62,5 @@ delete_endpoint = f"{pixela_endpoint}/{USERNAME}/graphs/{GRAPH_ID}/{today.strfti
 
 # response = requests.delete(url=delete_endpoint, headers=headers)
 # print(response.text)
+
+# VIEWABLE_GRAPH - "https://pixe.la/v1/users/b34ux/graphs/graph1"
