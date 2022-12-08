@@ -10,7 +10,10 @@ notification_manager = NotificationManager()
 
 ORIGIN_CITY_IATA = "YVR"
 
-if sheet_data[0]["iataCode"] == "":
+print(sheet_data)
+print(ORIGIN_CITY_IATA)
+
+if sheet_data[1]["iataCode"] == "":
     for row in sheet_data:
         row["iataCode"] = flight_search.get_destination_code(row["city"])
     data_manager.destination_data = sheet_data
@@ -26,7 +29,8 @@ for destination in sheet_data:
         from_time=tomorrow,
         to_time=six_month_from_today
     )
-    if flight.price < destination["price"]:
-        notification_manager.send_sms(
-            message=f"Low price alert! Only ${flight.price} to fly from {flight.origin_city}-{flight.origin_airport} to {flight.destination_city}-{flight.destination_airport}, from {flight.out_date} to {flight.return_date}."
-        )
+
+if flight.price < (destination['price']):
+    notification_manager.send_sms(
+        message=f"Low price alert! Only ${flight.price} to fly from {flight.origin_city}-{flight.origin_airport} to {flight.destination_city}-{flight.destination_airport}, from {flight.out_date} to {flight.return_date}."
+    )

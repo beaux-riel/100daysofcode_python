@@ -2,8 +2,7 @@ import requests
 from flight_data import FlightData
 
 TEQUILA_ENDPOINT = "https://api.tequila.kiwi.com"
-# "https://tequila-api.kiwi.com/"
-TEQUILA_API_KEY = ''
+TEQUILA_API_KEY = 'MY_API_KEY'
 
 
 class FlightSearch:
@@ -53,5 +52,5 @@ class FlightSearch:
             out_date=data["route"][0]["local_departure"].split("T")[0],
             return_date=data["route"][1]["local_departure"].split("T")[0]
         )
-        print(f"{flight_data.destination_city}: £{flight_data.price}")
+        print(f"{flight_data.destination_city}: ${flight_data.price}")
         return flight_data
