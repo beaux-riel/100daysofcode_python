@@ -7,6 +7,7 @@ WEIGHT_KG = 90
 HEIGHT_CM = 176
 AGE = 37
 
+# Set as environment variables
 APP_ID = os.environ["APP_ID"]
 API_KEY = os.environ["API_KEY"]
 
@@ -25,7 +26,7 @@ parameters = {
     "gender": GENDER,
     "weight_kg": WEIGHT_KG,
     "height_cm": HEIGHT_CM,
-    "age": AGE
+    "age": AGE,
 }
 
 response = requests.post(exercise_endpoint, json=parameters, headers=headers)
@@ -34,13 +35,10 @@ result = response.json()
 today_date = datetime.now().strftime("%d/%m/%Y")
 now_time = datetime.now().strftime("%X")
 
-print(os.environ["TOKEN"])
-
 #Bearer Token Authentication, now obscured
 bearer_headers = {
     "Authorization": f"Bearer {os.environ['TOKEN']}"
 }
-
 
 for exercise in result["exercises"]:
     sheet_inputs = {
