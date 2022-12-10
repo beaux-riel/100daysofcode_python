@@ -1,2 +1,2 @@
-MY_EMAIL = "b34ux.100days@yahoo.com"
-PASSWORD = "gavgek-fyvra7-qorviQ"
+MY_EMAIL = "b34ux.100days.test@gmail.com"
+PASSWORD = "ayakimfllwzqbmbf"
