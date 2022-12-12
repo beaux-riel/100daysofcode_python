@@ -1,6 +1,24 @@
 
 body {
-    color: #575757;
+    background-color: #EAF6F6;
+    color: grey;
+}
+
+h1 {
+    color: #66BFBF;
+}
+
+h3 {
+    color: #66BFBF;    
+}
+
+hr {
+    border-style: none;
+    border-top-style: dotted;
+    border-color: grey;
+    background-color: #EAF6F6;
+    border-width: 5px;
+    width: 5%;
 }
 
 a {
@@ -17,4 +35,3 @@ a {
     width: 12em;
     border-radius: 20px 60px 20px;
 }
-
