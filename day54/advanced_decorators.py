@@ -8,9 +8,10 @@ class User:
 def is_authenticated_decorator(function):
     def wrapper(*args, **kwargs):
         if args[0].is_logged_in == True:
-            function()
+            function(args[0])
     return wrapper
-    
+
+@is_authenticated_decorator
 def create_blog_post(user):
     print(f"This is {user.name}'s new blog post.")
     
