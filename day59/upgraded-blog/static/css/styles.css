@@ -11142,7 +11142,8 @@ header.masthead:before {
 header.masthead .page-heading,
 header.masthead .post-heading,
 header.masthead .site-heading {
-  color: #fff;
+  color: rgba(255, 255, 255);
+  /* color: #fff; */
 }
 header.masthead .page-heading,
 header.masthead .site-heading {
