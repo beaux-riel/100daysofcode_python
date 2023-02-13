@@ -30,11 +30,12 @@ class Book(db.Model):
     #Optional: this will allow each book object to be identified by its title when printed.
     def __repr__(self):
         return f'<Book {self.title}>'
-    
-db.create_all()
 
+with app.app_context():
+    db.create_all()
 
-# Create record
-new_book = Book(id=1, title="Scarecrow", author="Matthew Reilly", rating=9.2)
-db.session.add(new_book)
-db.session.commit()
+with app.app_context():
+    # Create record
+    new_book = Book(id=2, title="Ice Station", author="Matthew Reilly", rating=9.1)
+    db.session.add(new_book)
+    db.session.commit()
